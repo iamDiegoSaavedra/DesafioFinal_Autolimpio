@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>AutoLimpio</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                  <!-- Toggle button -->
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarCenteredExample"
+                    aria-controls="navbarCenteredExample"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <i class="fas fa-bars"></i>
+                  </button>
+              
+                  <!-- Collapsible wrapper -->
+                  <div class="collapse navbar-collapse justify-content-center"
+                    id="navbarCenteredExample">
+                
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    
+                  </div>
+                  <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+              </nav>
+            
+        </header>
+
+        <main>
+          <div class="row">
+            <div class="menu-form">
+              <ul>
+                <li><a href="#orm-cliente">Registro Clientes</a></li>
+                <li><a href="#form-vehiculo">Registro Vehículo</a></li>
+                <li><a href="#form-costoLavado">Servicio Lavado</a></li>
+                <li><a href="#form-seleccionPersonal">Seleccion Personal</a></li>
+              </ul>
+            </div>  
+          </div>
+          
+
+          <!--Registo Cliente-->
+          <div id="mensajes" class="alert alert-danger" role="alert" ></div>
+          <section id="form-cliente">
+            <h2>Registro Clientes</h2>
+            <form class="formulario form-group" id="form-clientes" action="servicio.html" >
+              <div class="form-group row">
+              
+                <div class="row">
+                  <div class="col">
+                    <label for="nombreCli">Nombre</label>
+                    <input type="text" id="nombreCli" name="nombreCli" class="form-control" placeholder="Nombre">
+                  </div>
+                  <div class="col">
+                    <label for="apellidoCli">Apellido</label>
+                    <input type="text" id="apellidoCli"  name="apellidoCli" class="form-control" placeholder="Apellido">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <label for="rutCli">RUT</label>
+                    <input type="text" id="rutCli" name="rutCli" class="form-control" placeholder="11111111">
+                  </div>
+                  <div class="col">
+                    <label for="dgVCli"> </label>
+                    <input type="text" id="dgVCli" name="dgVCli" class="form-control" placeholder="k">
+                  </div>
+                  <div class="col">
+                    <label for="direccionCli">Dirección</label>
+                    <input type="text" id="direccionCli" name="direccionCli" class="form-control" maxWidth="2px" placeholder="Dirección">
+                  </div>                  
+                  <div class="col">
+                      <label for="numdireccion">Número</label>
+                      <input type="number" id="numdireccion" name="numdireccion" class="form-control" placeholder="4444">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label for="sel-region">Seleccione Región</label>
+                    <select id="sel-region" name="sel-region" class="form-control" onchange="ShowSelected();">
+                      <option value="0" selected="selected" >Región...</option>
+                      <option value="14">XIV Arica y Parinacota</option>
+                      <option value="1">I Tarapacá</option>
+                      <option value="2">II Antofagasta</option>
+                      <option value="3">III Atacáma</option>
+                      <option value="4">IV Coquimbo</option>
+                      <option value="5">V Valparaíso</option>
+                      <option value="6">VI Libertador B. O'Higgins</option>
+                      <option value="7">VII Maule</option>
+                      <option value="16">XVI Ñuble</option>
+                      <option value="8">VIII Bío-Bío</option>
+                      <option value="9">IX Araucanía</option>
+                      <option value="15">XV Los Ríos</option>
+                      <option value="10">X Los Lagos</option>
+                      <option value="11">XI Aisén</option>
+                      <option value="12">XII Magallanes</option>                
+                      <option value="13">Metropolitana</option> 
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="comuna">Seleccione Comuna</label>
+                    <select id="comuna" name="comuna" class="form-control">
+                      <option value="0" selected="selected" >...</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-2 form-group">
+                    <button id="btnCliente" type="button" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>                
+            </form>
+          </section>
+
+          <!--Registro Vehiculo-->
+          <section id="form-vehiculo">
+            <h2>Registro Vehículo</h2>
+            <form class="formulario" id="form-vehiculos" action="servicio.html"  >
+            
+                <div class="row">
+                  <div class="col">
+                    <label for="TipoVehiculo">Seleccione Tipo Vehículo</label>
+                    <select class="form-control" id="TipoVehiculo" name="TipoVehiculo" aria-placeholder="Seleccionar">
+                      <option value="0" >Selecciona tipo Vehiculo...</option>
+                      <option value="1">Cupé</option>
+                      <option value="2">City Car</option>
+                      <option value="3">Sedán</option>
+                      <option value="4">Station Wagon</option>
+                      <option value="5">SUV</option>
+                      <option value="6">Furgón</option>
+                      <option value="7">Pick-Up</option>
+                      <option value="8">MiniVan</option>
+                      <option value="9">Moto</option>
+                      <option value="10">Camioneta 4x4</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="marca">Marca Vehículo</label>
+                    <input type="text"id="marca" name="marca" class="form-control" placeholder="Marca">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <label for="modelo">Modelo Vehículo</label>
+                    <input type="text" id="modelo" name="modelo" class="form-control" placeholder="Modelo">
+                  </div>
+                  <div class="col">
+                    <label for="year">Año Vehículo</label>
+                    <input type="text" id="year" name="year" class="form-control" placeholder="Año">
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <label for="rtecnica">Revisión Técnica</label>
+                  <p>Debe seleccionar una opción si su revisión Técnica esta al día</p>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rtecnica" id="rtecnica1" value="si">
+                    <label class="form-check-label" for="rtecnica1">
+                      SÍ
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rtecnica" id="rtecnica2" value="no">
+                    <label class="form-check-label" for="rtecnica2">
+                      No
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+          </section>
+          
+          <!--Seleccion Servicio Lavado-->
+          <section id="form-costoLavado">
+            <h2>Servicio Lavado</h2>
+            <form class="formulario" id="form-servicioLavado" action="servicio.html"  >
+
+              <div class="row">
+                <p>Seleccion el servicio que desea realizar.puede ser más de uno</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="7000" id="lavadoExterior">
+                  <label class="form-check-label" for="lavadoExterior">
+                    Lavado Exterior $7.000.-
+                  </label>
+                </div>      
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="5000" id="lavadoMotor">
+                  <label class="form-check-label" for="lavadoMotor">
+                      Lavado Motor $5.000.-
+                  </label>
+                </div>  
+                <button id="btnCalcular" type="button" class="btn btn-primary">Calcular</button>
+            </form>
+            <div class="row">
+              <div class="col-1">Neto</div>
+              <div id="neto" class="col-2">$</div>
+              <div class="col-1">IVA</div>
+              <div id="iva" class="col-2">$</div>
+              <div class="col-1">TOTAL</div>
+              <div id="total" class="col-2">$</div>
+            </div>
+          </section>
+
+          <!--Encargado de servicio-->
+          <section id="form-seleccionPersonal">
+            <form class="formulario" id="form-personal" action="servicio.html">
+              <h2>Seleccion Personal</h2>
+              <p>Seleccione una persona encargada del lavado de su vehículo y fecha de término del servicio</p>
+              <div class="row">
+                <div class="col">
+                  <label for="encargadoLavado">Encargado Servicio Lavado</label>
+                  <select id="encargadoLavado" name="encargadoLavado" class="form-control">
+                    <option value="" >Seleccione personal</option>
+                    <option value="Juan_Perez">Juan Perez</option>
+                    <option value="Jose_Soto">Jose Soto</option>
+                    <option value="Juan_Herrera">Juan Herrera</option>
+                    <option value="Miguel_Diaz">Miguel Diaz</option>
+                    <option value="Carlos_Sera">Carlos Sera</option>
+                  </select>
+                  </div>
+                  <div class="col">
+                    <label for="fecha">Fecha termino servicio</label>
+                    <input type="text" id="fecha" name="fecha" class="form-control" pattern="\d{1,2}/\d{1,2}/\d{4}" value="" placeholder="17/02/2022">
+                  </div>
+                  
+                  <div class="col">
+                    <label for="hora">Hora termino servicio</label>
+                    <input type="time" id="hora" name="hora" class="form-control" value="00:00:00" step="1" placeholder="00:00:00">
+                  </div>
+                  <div class="row">
+                    <div class="col-2 form-group">
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                  </div>
+              </div>  
+            </form>
+          </section>
+
+        </main>
+
+        <footer>
+            
+
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/include.js"></script>
+    <script src="js\select.js"></script>
+    <script src="js\probarPersonal.js"></script>
+</body>
+</html>

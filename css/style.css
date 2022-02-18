@@ -1,0 +1,30 @@
+section#banner-carrusel img{
+    max-height: 500px;
+}
+
+form.formulario {
+    margin-top:30px;
+    padding: 20px;
+}
+
+section h2{
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.menu-form ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-form li {
+    float: left;
+}
+  
+.menu-form li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+ }
