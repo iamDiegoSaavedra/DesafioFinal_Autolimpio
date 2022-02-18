@@ -1,10 +1,44 @@
+body{
+    background-color:  #ccffe6;
+}
+
+section div.color-form{
+    background-color: #e6ffe6;
+    border-radius: 15px;
+    border-style: groove;
+    border-width: 1px;
+    border-color: black;
+
+}
+
+
 section#banner-carrusel img{
     max-height: 500px;
 }
 
+section#cartas img{
+    max-height: 180px;
+}
+
+section#cartas{
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+section#cartas .card-body{
+    background-color: #009933;
+    color: white;
+}
+
 form.formulario {
     margin-top:30px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form.formulario div.form-check {
+    margin-left: 20px;
 }
 
 section h2{
@@ -12,11 +46,15 @@ section h2{
     padding-top: 10px;
 }
 
+.menu-form {
+    text-align: center;
+}
 .menu-form ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: inline-block;    
 }
 
 .menu-form li {

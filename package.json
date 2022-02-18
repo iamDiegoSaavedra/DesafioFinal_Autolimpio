@@ -1,0 +1,24 @@
+{
+  "name": "desafiofinal_autolimpio",
+  "version": "1.0.0",
+  "description": "proyecto final modulo front-end autolimpio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamDiegoSaavedra/DesafioFinal_Autolimpio.git"
+  },
+  "author": "Diego Saavedra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamDiegoSaavedra/DesafioFinal_Autolimpio/issues"
+  },
+  "homepage": "https://github.com/iamDiegoSaavedra/DesafioFinal_Autolimpio#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "font-awesome-iconset": "^5.15.4",
+    "jquery": "^3.6.0"
+  }
+}
