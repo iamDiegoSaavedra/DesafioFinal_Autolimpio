@@ -16,7 +16,7 @@
         </header>
 
         <main>
-          <div class="row">
+          <div id="menu" class="row">
             <div class="menu-form">
               <ul>
                 <li><a href="#form-cliente">Registro Clientes</a></li>
@@ -102,6 +102,8 @@
                   <div class="col-2 form-group">
                     <br>
                     <button id="btnCliente" type="button" class="btn btn-primary">Enviar</button>
+                    <a href="#form-cliente">atras</a>
+                    <a href="#form-vehiculos">siguiente</a> 
                   </div>
                 </div>                
             </form>
@@ -166,7 +168,12 @@
                   </div>
                 </div>
                 <br>
-                <button id="btnRegVehiculo" type="submit" class="btn btn-primary">Enviar</button>
+                <div class="col-2 form-group">
+                  <button id="btnRegVehiculo" type="submit" class="btn btn-primary">Enviar</button>
+                  <a href="#form-cliente">atras</a>
+                  <a href="#form-costoLavado">siguiente</a>  
+                </div>
+               
             </form>
             </div>
           </section>
@@ -203,7 +210,11 @@
                 <div class="row">
                   <div class="col-2 form-group">
                     <br>
-                    <button id="btnCalcular" type="button" class="btn btn-primary">Calcular</button>                  </div>
+                    <button id="btnCalcular" type="button" class="btn btn-primary">Calcular</button>
+                    <a href="#form-cliente">atras</a>
+                    <a href="#form-seleccionPersonal">siguiente</a>
+                    </div>
+                    
                 </div>
             </form>
 
@@ -242,7 +253,9 @@
                     <div class="col-2 form-group">
                       <br>
                       <button id="btnRegPersonal" type="submit" class="btn btn-primary">Enviar</button>
+                      <a href="#menu">inicio</a>
                     </div>
+                  
                   </div>
                 </div>  
               </form>
