@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"  href="node_modules/font-awesome-iconset/dist/iconset.min.js"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="css/style.css"/>
+    <style>
+        #map{height: 500px;}
+    </style>
+    <title>Sucursales</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col">
+                    <div id="map"></div>
+                </div>
+                <div class="col">
+                    <h2>Conoce nuestras sucursales</h2>
+                    <ul>
+                        <li>
+                            <p><i class="fa fa-home fa-lg"></i> Miraflores 123, temuco</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+
+    <script>
+        var map = L.map('map').setView([-38.734502, -72.588387], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-38.734502, -72.588387]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
+
+        var popup = L.popup()
+            .setLatLng([-38.734486, -72.589717])
+            .setContent("Aqui.")
+            .openOn(map);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'your.mapbox.access.token'
+        }).addTo(map);
+    </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>   
+    <script src="js\map.js"></script>
+    <script src="js\formContacto.js"></script>
+</body>
+</html>
