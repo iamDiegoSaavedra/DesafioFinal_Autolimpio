@@ -20,9 +20,9 @@
                     <div id="mensajeContacto" class="alert alert-danger d-none" role="alert" ></div>
                 </div>
 
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-lg-6 col-sm-12">
-                        <div class="color-form">
+                        <div class="color-form p-1">
 
                             <form id="contacto" action="contacto.html">
                                 <h3>Contacto</h3>
@@ -37,16 +37,22 @@
                                     <label for="email">Email</label>
                                     <input type="text" class="form-control" id="email" placeholder="email">
                                 </div>
-                                <div>
-                                    <p>Motivo Mensaje:</p>
-                                    <input type="radio" id="motivo1" name="motivo" value="1">
-                                    <label for="motivo1">Felicitación</label><br>
-                                    <input type="radio" id="motivo2" name="motivo" value="2">
-                                    <label for="motivo2">Consulta</label><br>  
-                                    <input type="radio" id="motivo3" name="motivo" value="3">
-                                    <label for="motivo3">Reclamo</label><br><br>
+                                <div class="mt-2">
+                                    <label>Motivo :</label><br>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" id="motivo1" name="motivo" value="1">
+										<label for="motivo1"  class="form-check-label">Felicitación</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input"  id="motivo2" name="motivo" value="2">
+										<label for="motivo2"  class="form-check-label">Consulta</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input"  id="motivo3" name="motivo" value="3">
+										<label for="motivo3"  class="form-check-label">Reclamo</label>
+									</div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group mt-1">
                                     <label for="txtMensajes">Mensaje</label>
                                     <textarea class="form-control" id="txtMensajes" rows="3"></textarea>
                                 </div>

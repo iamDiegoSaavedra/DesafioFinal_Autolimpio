@@ -3,9 +3,9 @@ body{
 }
 
 
-section div.color-form{
+section div .color-form{
     background-color: #e6ffe6;
-    border-radius: 15px;
+    border-radius: none;
     border-style: groove;
     border-width: 1px;
     border-color: black;

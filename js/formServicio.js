@@ -3,7 +3,6 @@ window.addEventListener("DOMContentLoaded", (loadEvent) => {
     $("footer").load("include/footer.html");
 });
 
-
 //Validar Formulario Servicio Lavado
 document.querySelector("#form-servicioLavado").addEventListener("click", (evento) => {
 
